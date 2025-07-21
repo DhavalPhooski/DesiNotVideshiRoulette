@@ -204,19 +204,19 @@ const Game = () => {
       <div className="bullet-reveal">
         <h2>{isNewRound ? `Round ${gameState.roundNumber}!` : 'Round Starting!'}</h2>
         {isNewRound && (
-          <p className="new-round-text">Bullets exhausted! New bullets generated.</p>
+          <p className="new-round-text">Rocks exhausted! New Rocks generated.</p>
         )}
         <div className="bullet-composition">
-          <h3>Bullet Composition:</h3>
+          <h3>Rock Composition:</h3>
           <div className="bullet-counts">
             <div className="real-bullets">
-              🔴 Real Bullets: {gameState.bulletComposition.real}
+              🔴 Real Rocks: {gameState.bulletComposition.real}
             </div>
             <div className="fake-bullets">
-              ⚪ Fake Bullets: {gameState.bulletComposition.fake}
+              ⚪ Fake Rocks: {gameState.bulletComposition.fake}
             </div>
           </div>
-          <p>Good luck! The bullets have been shuffled.</p>
+          <p>Good luck! The Rocks have been shuffled.</p>
         </div>
       </div>
     );
@@ -230,7 +230,7 @@ const Game = () => {
           <span>Round: {gameState.roundNumber}</span>
         </div>
         <div className="bullet-info">
-          Bullets remaining: {gameState.bullets.length - gameState.currentBulletIndex}
+          Rocks remaining: {gameState.bullets.length - gameState.currentBulletIndex}
         </div>
         {/* HealthDisplay component used here */}
         <HealthDisplay myHealth={myHealth} opponentHealth={opponentHealth} />
